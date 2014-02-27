@@ -46,5 +46,14 @@ class must-have {
   }
 }
 
-include must-have
+class environment-setup {
+  file {
+    "path":
+    path => "/etc/environment",
+    content => 'PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/vagrant/jdk1.7.0_51/bin:/vagrant/apache-cassandra-2.0.4-SNAPSHOT/bin"'
+  }
+}
+
+#include must-have
+include environment-setup
 include cassandra

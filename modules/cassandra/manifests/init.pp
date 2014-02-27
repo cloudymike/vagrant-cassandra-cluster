@@ -5,7 +5,6 @@ class cassandra {
     cwd => "/vagrant",
     user => "vagrant",
     path    => "/usr/bin/:/bin/",
-    require => Exec["accept_license"],
     creates => "/vagrant/apache-cassandra-2.0.4-SNAPSHOT",
   }
 
@@ -48,9 +47,9 @@ class cassandra {
   exec {
     "start-cassandra":
     command => 'nohup /vagrant/apache-cassandra-2.0.4-SNAPSHOT/bin/cassandra &',
-    cwd => "/home/vagrant",
-    user => "vagrant",
-    path    => "/usr/bin/:/bin/",
-    require => [ Package[oracle-java7-installer], File["cassandra-env.sh"], File["cassandra.yaml"], File["cassandra-topology.properties"], File["log4j-server.properties"] ],
+    cwd     => "/home/vagrant",
+    user    => "vagrant",
+    path    => "/usr/bin/:/bin/:/vagrant/jdk1.7.0_51/bin",
+    require => [ File["cassandra-env.sh"], File["cassandra.yaml"], File["cassandra-topology.properties"], File["log4j-server.properties"] ],
   }
 }
