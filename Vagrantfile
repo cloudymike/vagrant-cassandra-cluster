@@ -14,11 +14,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :node1 do |node1|
     node1.vm.network "private_network", ip: "192.168.7.12"
     node1.vm.hostname = "node1.local"
+    node1.vm.network "forwarded_port", guest: 1414, host: 7444, auto_correct: true
     node1.vm.network "forwarded_port", guest: 9042, host: 9042, auto_correct: true
     node1.vm.network "forwarded_port", guest: 9160, host: 9160, auto_correct: true
   end
   config.vm.define :node2 do |node2|
     node2.vm.network "private_network", ip: "192.168.7.13"
     node2.vm.hostname = "node2.local"
+    node2.vm.network "forwarded_port", guest: 1414, host: 7445, auto_correct: true
   end
 end
