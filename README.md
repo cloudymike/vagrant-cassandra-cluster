@@ -15,11 +15,16 @@ Modified from https://bitbucket.org/durdn/stash-vagrant-install.git
         $ git clone https://github.com/shaochuan/vagrant-cassandra-cluster.git
         $ cd vagrant-cassandra-cluster
 
-2. Start up and provision automatically all dependencies in the vm:
+2. Put the cassandra apache under vagrant-cassandra-cluster
+
+        $ ls apache-cassandra-2.0.4-SNAPSHOT-bin.tar.gz
+        $ pwd
+
+3. Start up and provision automatically all dependencies in the vm:
 
         $ vagrant up
 
-3. Now your cluster is up and running. At your host machine, use cqlsh to connect with the cluster
+4. Now your cluster is up and running. At your host machine, use cqlsh to connect with the cluster
 
         $ cqlsh
 
