@@ -1,0 +1,4 @@
+#!/bin/bash
+# This should be added to puppet
+# for now quick fix for download
+wget http://apache.mirrors.lucidnetworks.net/cassandra/2.0.9/apache-cassandra-2.0.9-bin.tar.gz 
