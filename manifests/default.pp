@@ -1,9 +1,9 @@
 define append_if_no_such_line($file, $line, $refreshonly = 'false') {
-   exec { "/bin/echo '$line' >> '$file'":
+  exec { "/bin/echo '$line' >> '$file'":
       unless      => "/bin/grep -Fxqe '$line' '$file'",
       path        => "/bin",
       refreshonly => $refreshonly,
-   }
+  }
 }
 
 class must-have {
@@ -21,9 +21,9 @@ class must-have {
   }
 
   package { ["vim",
-             "curl",
-             "git-core",
-             "bash"]:
+            "curl",
+            "git-core",
+            "bash"]:
     ensure => present,
     require => Exec["apt-get update"],
     before => Apt::Ppa["ppa:webupd8team/java"],
