@@ -49,7 +49,7 @@ class cassandra {
 
   exec {
     "start-cassandra":
-    command => 'nohup /vagrant/apache-cassandra-${CasVer}/bin/cassandra &',
+    command => "nohup /vagrant/apache-cassandra-${CasVer}/bin/cassandra &",
     cwd => "/home/vagrant",
     user => "vagrant",
     path    => "/usr/bin/:/bin/",
