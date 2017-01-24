@@ -12,7 +12,7 @@ Modified from https://bitbucket.org/durdn/stash-vagrant-install.git
 
 1. Clone the repository
 
-        $ git clone https://github.com/shaochuan/vagrant-cassandra-cluster.git
+        $ git clone ...
         $ cd vagrant-cassandra-cluster
 
 2. Put the cassandra apache under vagrant-cassandra-cluster
