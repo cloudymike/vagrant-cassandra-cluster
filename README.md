@@ -27,4 +27,3 @@ Modified from https://bitbucket.org/durdn/stash-vagrant-install.git
 4. Now your cluster is up and running. At your host machine, use cqlsh to connect with the cluster
 
         $ cqlsh
-
