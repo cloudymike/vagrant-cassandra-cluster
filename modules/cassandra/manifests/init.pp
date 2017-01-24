@@ -1,6 +1,6 @@
 class cassandra {
 
-  $CasVer="2.0.9"
+  $CasVer="2.2.8"
   exec {
     "extract_cassandra":
     command => "tar xfz /vagrant/apache-cassandra-${CasVer}-bin.tar.gz",

@@ -12,13 +12,12 @@ Modified from https://bitbucket.org/durdn/stash-vagrant-install.git
 
 1. Clone the repository
 
-        $ git clone https://github.com/shaochuan/vagrant-cassandra-cluster.git
+        $ git clone git@github.com:cloudymike/vagrant-cassandra-cluster.git
         $ cd vagrant-cassandra-cluster
 
 2. Put the cassandra apache under vagrant-cassandra-cluster
 
-        $ ls apache-cassandra-2.0.4-SNAPSHOT-bin.tar.gz
-        $ pwd
+        $ ./getCassandra
 
 3. Start up and provision automatically all dependencies in the vm:
 
